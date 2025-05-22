@@ -19,7 +19,13 @@ export function RoleManagement() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
 
-  const roles = [
+  const roles: UserRole[] = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+];
   "admin",
   "clinician",
   "researcher",
@@ -55,7 +61,13 @@ export function RoleManagement() {
       setUserId(user.id)
 
       // Get user's current roles
-      const roles = [
+      const roles: UserRole[] = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+];
   "admin",
   "clinician",
   "researcher",
@@ -87,7 +99,13 @@ export function RoleManagement() {
       await assignRoleToUser(userId, selectedRole)
 
       // Refresh user roles
-      const roles = [
+      const roles: UserRole[] = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+];
   "admin",
   "clinician",
   "researcher",
@@ -120,7 +138,13 @@ export function RoleManagement() {
       await removeRoleFromUser(userId, role)
 
       // Refresh user roles
-      const roles = [
+      const roles: UserRole[] = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+];
   "admin",
   "clinician",
   "researcher",
