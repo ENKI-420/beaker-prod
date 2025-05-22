@@ -19,7 +19,7 @@ export function RoleManagement() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
 
-  const roles: UserRole[] = ["admin", "clinician", "researcher", "patient", "developer"]
+  const roles = ["admin", "clinician", "researcher", "patient", "developer"] as UserRole[];
 
   const handleSearchUser = async () => {
     if (!email) {
