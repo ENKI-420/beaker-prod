@@ -1,0 +1,12 @@
+
+openapi: 3.0.0
+info:
+  title: Beaker API
+  version: "1.0.0"
+paths:
+  /api/hello:
+    get:
+      summary: Hello endpoint
+      responses:
+        '200':
+          description: Returns greeting message
