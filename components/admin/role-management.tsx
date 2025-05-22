@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { toast } from "sonner"
-import { assignRoleToUser, removeRoleFromUser, getUserRoles, type UserRole } from "@/lib/auth/role-management"
 import { getSupabaseClient } from "@/lib/supabase/client"
 import { logger } from "@/lib/logging/enhanced-logger"
 
