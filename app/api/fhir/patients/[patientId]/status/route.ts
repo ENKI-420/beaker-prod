@@ -2,5 +2,5 @@ export async function GET(
   request: Request,
   { params }: { params: { patientId: string } }
 ) {
-  return new Response(`Health record for patient ${params.patientId}`, { status: 200 });
+  return new Response(`Status for patient ${params.patientId}`, { status: 200 });
 }
