@@ -19,7 +19,13 @@ export function RoleManagement() {
   const [isLoading, setIsLoading] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
 
-  const roles = ["admin", "clinician", "researcher", "patient", "developer"] as UserRole[];
+  const roles = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+] as const satisfies readonly UserRole[];
 
   const handleSearchUser = async () => {
     if (!email) {
@@ -49,7 +55,13 @@ export function RoleManagement() {
       setUserId(user.id)
 
       // Get user's current roles
-      const roles = await getUserRoles(user.id)
+      const roles = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+] as const satisfies readonly UserRole[];
       setUserRoles(roles)
 
       toast.success("User found")
@@ -75,7 +87,13 @@ export function RoleManagement() {
       await assignRoleToUser(userId, selectedRole)
 
       // Refresh user roles
-      const roles = await getUserRoles(userId)
+      const roles = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+] as const satisfies readonly UserRole[];
       setUserRoles(roles)
 
       toast.success(`Role ${selectedRole} assigned successfully`)
@@ -102,7 +120,13 @@ export function RoleManagement() {
       await removeRoleFromUser(userId, role)
 
       // Refresh user roles
-      const roles = await getUserRoles(userId)
+      const roles = [
+  "admin",
+  "clinician",
+  "researcher",
+  "patient",
+  "developer"
+] as const satisfies readonly UserRole[];
       setUserRoles(roles)
 
       toast.success(`Role ${role} removed successfully`)
