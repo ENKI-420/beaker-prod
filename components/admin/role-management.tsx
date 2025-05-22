@@ -14,7 +14,7 @@ import { logger } from "@/lib/logging/enhanced-logger"
 export function RoleManagement() {
   const [userId, setUserId] = useState("")
   const [email, setEmail] = useState("")
-  const [selectedRole, setSelectedRole] = useState<UserRole>("clinician")
+  const [selectedRole, setSelectedRole] = useState<UserRole>("clinician" as UserRole)
   const [userRoles, setUserRoles] = useState<UserRole[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
