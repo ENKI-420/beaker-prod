@@ -1,6 +1,4 @@
-import { NextRequest } from 'next/server';
-
-export async function POST(req: NextRequest, { params }: { params: { patientId: string } }) {
+export async function POST(request: Request, { params }: { params: { patientId: string } }) {
   const { patientId } = params;
-  return new Response(JSON.stringify({ analyzed: true, patientId }), { status: 200 });
+  return new Response(`Analyzed patient ${patientId}`, { status: 200 });
 }
